@@ -13,6 +13,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+coverage
 .nyc_cache
 .nyc_output
 
