@@ -1,0 +1,10 @@
+sudo: false
+services:
+  - redis-server
+language: node_js
+node_js:
+  - node
+  - '8'
+  - '10'
+  - '12'
+install: npm install

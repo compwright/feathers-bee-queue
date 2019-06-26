@@ -1,0 +1,77 @@
+{
+  "name": "feathers-bee-queue",
+  "description": "A Feathers service adapter for Bee-Queue jobs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/compwright/feathers-bee-queue",
+  "main": "lib/",
+  "keywords": [
+    "feathers",
+    "feathers-plugin",
+    "bee-queue"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/compwright/feathers-bee-queue.git"
+  },
+  "author": {
+    "name": "Jonathon Hill",
+    "email": "jonathon@compwright.com",
+    "url": "https://compwright.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/compwright/feathers-bee-queue/issues"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "publish": "git push origin --tags && npm run changelog && git push origin",
+    "release:pre": "npm version prerelease && npm publish --tag pre",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
+    "lint": "semistandard lib/*.js lib/**/*.js test/*.js test/**/*.js --fix",
+    "mocha": "mocha --opts mocha.opts",
+    "coverage": "nyc npm run mocha",
+    "test": "npm run lint && npm run coverage"
+  },
+  "semistandard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "nyc": {
+    "cache": true,
+    "cacheDir": ".nyc_cache",
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@feathersjs/adapter-commons": "^2.0.0",
+    "@feathersjs/adapter-tests": "^1.0.1",
+    "@feathersjs/errors": "^3.3.6",
+    "lodash.assignin": "^4.2.0",
+    "sift": "^8.5.0"
+  },
+  "devDependencies": {
+    "@feathersjs/feathers": "^3.3.1",
+    "bee-queue": "^1.2.2",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "semistandard": "^13.0.1"
+  },
+  "peerDependencies": {
+    "bee-queue": "^1.2.2"
+  }
+}
