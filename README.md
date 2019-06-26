@@ -24,7 +24,7 @@ Returns a new service instance initialized with the given options.
 
 ```js
 const queueService = require('feathers-bee-queue');
-app.use('/messages', queueService({ id, startId, queue, events, paginate }));
+app.use('/jobs', queueService({ queue, events, paginate, multi }));
 ```
 
 __Options:__
