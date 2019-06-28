@@ -88,26 +88,43 @@ describe('Feathers Bee-Queue Service', () => {
     );
   });
 
-  it('update is not supported', async () => {
-    try {
-      await service.update(1, {});
-      throw new Error('Should never get here');
-    } catch (error) {
-      assert.ok(error instanceof errors.NotImplemented,
-        'Update operations are not supported'
-      );
-    }
+  describe('find', () => {
+    it('validates the query status', async () => {
+      try {
+        await service.find({ query: { status: 'asdf' } });
+        throw new Error('Should never get here');
+      } catch (error) {
+        assert.ok(error instanceof errors.BadRequest,
+          'status is missing or invalid'
+        );
+      }
+    });
   });
 
-  it('patch is not supported', async () => {
-    try {
-      await service.patch(1, {});
-      throw new Error('Should never get here');
-    } catch (error) {
-      assert.ok(error instanceof errors.NotImplemented,
-        'Patch operations are not supported'
-      );
-    }
+  describe('update', () => {
+    it('not supported', async () => {
+      try {
+        await service.update(1, {});
+        throw new Error('Should never get here');
+      } catch (error) {
+        assert.ok(error instanceof errors.NotImplemented,
+          'Update operations are not supported'
+        );
+      }
+    });
+  });
+
+  describe('patch', () => {
+    it('not supported', async () => {
+      try {
+        await service.patch(1, {});
+        throw new Error('Should never get here');
+      } catch (error) {
+        assert.ok(error instanceof errors.NotImplemented,
+          'Patch operations are not supported'
+        );
+      }
+    });
   });
 
   testSuite(app, errors, '/queue');
