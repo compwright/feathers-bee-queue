@@ -88,6 +88,68 @@ describe('Feathers Bee-Queue Service', () => {
     );
   });
 
+  describe('pubsub events', () => {
+    describe('when enabled', () => {
+      let app, queue, service;
+
+      beforeEach(() => {
+        app = feathers();
+        queue = new Queue('pubsub');
+        service = app.use('/pubsub', plugin({
+          queue,
+          events: [ 'progress' ]
+        })).service('/pubsub');
+        service.setup(app, '/pubsub');
+      });
+
+      afterEach(() => queue.destroy());
+
+      it('emits progress event', done => {
+        service.create({})
+          .then(job => queue.getJob(job.id))
+          .then(job => {
+            service.on('progress', event => {
+              assert.strictEqual(event.id, job.id);
+              assert.strictEqual(event.progress, 50);
+              done();
+            });
+            job.reportProgress(50);
+          })
+          .catch(done);
+      });
+    });
+
+    describe('when disabled', () => {
+      let app, queue, service;
+
+      beforeEach(() => {
+        app = feathers();
+        queue = new Queue('pubsub2');
+        service = app.use('/pubsub2', plugin({
+          queue,
+          events: []
+        })).service('/pubsub2');
+        service.setup(app, '/pubsub2');
+      });
+
+      afterEach(() => queue.destroy());
+
+      it('does not emit progress event', done => {
+        service.create({})
+          .then(job => queue.getJob(job.id))
+          .then(job => {
+            service.on('progress', () => {
+              done(new Error('It should not emit an event'));
+            });
+            job.reportProgress(50);
+            assert.ok(true);
+            done();
+          })
+          .catch(done);
+      });
+    });
+  });
+
   describe('find', () => {
     it('validates the query status', async () => {
       try {
