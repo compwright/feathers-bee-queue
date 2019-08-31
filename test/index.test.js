@@ -74,7 +74,7 @@ describe('Feathers Bee-Queue Service', () => {
   const queue = new Queue('feathers-test');
   const app = feathers().use('/queue', plugin({
     queue,
-    events: [ 'testing' ]
+    events: ['testing']
   }));
   const service = app.service('/queue');
 
@@ -97,7 +97,7 @@ describe('Feathers Bee-Queue Service', () => {
         queue = new Queue('pubsub');
         service = app.use('/pubsub', plugin({
           queue,
-          events: [ 'progress' ]
+          events: ['progress']
         })).service('/pubsub');
         service.setup(app, '/pubsub');
       });
