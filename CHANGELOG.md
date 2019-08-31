@@ -1,5 +1,8 @@
 # Change Log
 
+## [v2.0.0](https://github.com/compwright/feathers-bee-queue/tree/v2.0.0) (2019-08-31)
+[Full Changelog](https://github.com/compwright/feathers-bee-queue/compare/v1.0.5...v2.0.0)
+
 ## [v1.0.5](https://github.com/compwright/feathers-bee-queue/tree/v1.0.5) (2019-08-31)
 [Full Changelog](https://github.com/compwright/feathers-bee-queue/compare/v1.0.4...v1.0.5)
 
