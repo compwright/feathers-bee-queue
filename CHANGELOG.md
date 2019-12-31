@@ -1,5 +1,12 @@
 # Change Log
 
+## [v2.0.1](https://github.com/compwright/feathers-bee-queue/tree/v2.0.1) (2019-12-31)
+[Full Changelog](https://github.com/compwright/feathers-bee-queue/compare/v2.0.0...v2.0.1)
+
+**Merged pull requests:**
+
+- Bump handlebars from 4.1.2 to 4.5.3 [\#2](https://github.com/compwright/feathers-bee-queue/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v2.0.0](https://github.com/compwright/feathers-bee-queue/tree/v2.0.0) (2019-08-31)
 [Full Changelog](https://github.com/compwright/feathers-bee-queue/compare/v1.0.5...v2.0.0)
 
