@@ -1,7 +1,7 @@
 {
   "name": "feathers-bee-queue",
   "description": "A Feathers service adapter for Bee-Queue jobs",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "homepage": "https://github.com/compwright/feathers-bee-queue",
   "main": "lib/",
   "keywords": [
