@@ -5,6 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/compwright/feathers-bee-queue/badges/coverage.svg)](https://codeclimate.com/github/compwright/feathers-bee-queue/coverage)
 [![Dependency Status](https://img.shields.io/david/compwright/feathers-bee-queue.svg?style=flat-square)](https://david-dm.org/compwright/feathers-bee-queue)
 [![Download Status](https://img.shields.io/npm/dm/feathers-bee-queue.svg?style=flat-square)](https://www.npmjs.com/package/feathers-bee-queue)
+[![Sponsor on GitHub](https://img.shields.io/static/v1?label=Sponsor&message=❤&logo=GitHub&link=https://github.com/sponsors/compwright)](https://github.com/sponsors/compwright)
 
 A [Feathers](https://feathersjs.com) service adapter for [Bee-Queue](https://www.npmjs.com/package/bee-queue) jobs.
 
