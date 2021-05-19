@@ -1,5 +1,18 @@
 # Changelog
 
+## [v2.1.1](https://github.com/compwright/feathers-bee-queue/tree/v2.1.1) (2021-05-19)
+
+[Full Changelog](https://github.com/compwright/feathers-bee-queue/compare/v2.1.0...v2.1.1)
+
+**Closed issues:**
+
+- Job options setting [\#5](https://github.com/compwright/feathers-bee-queue/issues/5)
+
+**Merged pull requests:**
+
+- Bump hosted-git-info from 2.8.8 to 2.8.9 [\#7](https://github.com/compwright/feathers-bee-queue/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump lodash from 4.17.20 to 4.17.21 [\#6](https://github.com/compwright/feathers-bee-queue/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v2.1.0](https://github.com/compwright/feathers-bee-queue/tree/v2.1.0) (2020-12-16)
 
 [Full Changelog](https://github.com/compwright/feathers-bee-queue/compare/v2.0.2...v2.1.0)
